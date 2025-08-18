@@ -7,7 +7,7 @@ import Voice from '@react-native-voice/voice';
 import axios from 'axios';
 
 const VoiceAssistantScreen = () => {
-    const [apiKey, setApiKey] = useState('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');
+    const [apiKey, setApiKey] = useState('API_KEY');
     const [messages, setMessages] = useState([
         { id: 1, text: "Hello! I'm your health assistant. How can I help you today?", sender: 'assistant' }
     ]);
@@ -264,5 +264,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#e74c3c',
     },
 });
+
 
 export default VoiceAssistantScreen;
