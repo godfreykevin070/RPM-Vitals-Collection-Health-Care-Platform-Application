@@ -12,7 +12,7 @@ let DoctorPatientData;
 const makeDoctorCall = async () => {
   try {
     const response = await axios.post("http://192.168.179.190:5000/makeDoctorCall", {
-      to: "+918825534694",  // Replace with the recipient's phone number
+      to: "+91",  // Replace with the recipient's phone number
     });
 
     Alert.alert("Call Status", response.data.message);
@@ -25,7 +25,7 @@ const makeDoctorCall = async () => {
 const makeFriendCall = async () => {
   try {
     const response = await axios.post("http://192.168.179.190:5000/makeFriendCall", {
-      to: "+918825534694",  // Replace with the recipient's phone number
+      to: "+91",  // Replace with the recipient's phone number
     });
 
     Alert.alert("Call Status", response.data.message);
@@ -910,4 +910,5 @@ const styles = StyleSheet.create({
 });
 
 export default ProfileScreen;
+
 export {DoctorPatientData};
