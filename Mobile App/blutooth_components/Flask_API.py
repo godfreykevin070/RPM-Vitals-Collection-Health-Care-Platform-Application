@@ -25,9 +25,9 @@ def get_user_credentials():
     return response
 
 # Twilio credentials
-ACCOUNT_SID = "ACc0310c7ba2f19f76dc10675dad357d80"
-AUTH_TOKEN = "10594d0b5330f0cf52e2565858697f98"
-TWILIO_NUMBER = "+16206340541"
+ACCOUNT_SID = ""
+AUTH_TOKEN = ""
+TWILIO_NUMBER = "+xxxxxxxxxx"
 
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
@@ -42,7 +42,7 @@ def makeDoctorCall():
     call = client.calls.create(
         to=recipient_number,
         from_=TWILIO_NUMBER,
-        twiml="<Response><Dial>+919600082762</Dial></Response>"
+        twiml="<Response><Dial>+91</Dial></Response>"
     )
 
     return jsonify({"message": "Call initiated", "call_sid": call.sid})
@@ -58,10 +58,11 @@ def makeFriendCall():
     call = client.calls.create(
         to=recipient_number,
         from_=TWILIO_NUMBER,
-        twiml="<Response><Dial>+919600082762</Dial></Response>"
+        twiml="<Response><Dial>+91</Dial></Response>"
     )
 
     return jsonify({"message": "Call initiated", "call_sid": call.sid})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
